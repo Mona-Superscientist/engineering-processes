@@ -90,7 +90,6 @@ Claude Code is a CLI-based, repository-aware AI agent that understands your proj
 - https://www.anthropic.com/customers
 - https://www.anthropic.com/news
 
----
 
 #### 🤖 Codex / API-Based Agents
 
@@ -115,7 +114,6 @@ API-driven coding agents that can be embedded into internal tools and automation
 - https://platform.openai.com/examples
 - https://openai.com/customers
 
----
 
 #### 💡 GitHub Copilot
 
@@ -138,10 +136,9 @@ IDE-based assistant providing real-time code suggestions.
 - Supporting junior engineers
 
 **References / Case Studies:**
-- https://github.blog/category/copilot/
+- https://github.blog/ai-and-ml/github-copilot/
 - https://github.blog/2023-06-27-the-impact-of-github-copilot-on-developer-productivity-and-happiness/
 
----
 
 ### 2.2 Recommended Hybrid Approach
 
@@ -159,7 +156,6 @@ Most high-performing teams use a **combination of agents**:
 > ✅ **Key Insight:**  
 > Use **Copilot for speed**, **Claude for correctness**, and **Codex for automation pipelines**.
 
----
 
 ### 2.3 Standardizing Agent Behavior
 
@@ -173,7 +169,6 @@ This ensures:
 - Standardized PRs and stories
 - Predictable behavior across teams
 
----
 
 ### 2.4 Installation & Prerequisites
 
@@ -187,13 +182,13 @@ For Claude Code (reference setup):
 
 > 🔄 **Note:** Other agents (Codex, Copilot) will require their own setup, but must still follow this framework’s constraints.
 
-### 2.2 The CLAUDE.md Project Configuration File
+### 2.5 The CLAUDE.md Project Configuration File
 
 The single most important file for agent quality is `CLAUDE.md`, placed at the root of your repository. This file is read by Claude Code at the start of every session and tells the agent everything it needs to know about your project.
 
 > ⚠️ **Rule:** Every repository that uses AI agents **MUST** have a `CLAUDE.md` file. Without it, the agent operates blindly. Treat this file with the same importance as your `README.md`.
 
-#### 2.2.1 CLAUDE.md Required Sections
+#### 2.5.1 CLAUDE.md Required Sections
 
 ##### A. Project Identity
 
@@ -284,7 +279,7 @@ Team Slack Channel: #team-channel
 ## Testing
 - Unit tests: all business logic functions
 - Integration tests: all API endpoints
-- E2E tests: all critical user flows (Playwright)
+- E2E tests: all critical user flows 
 - Load test: any endpoint expected >100 RPS
 - Security scan: run SAST on every PR (Semgrep)
 ```
@@ -300,7 +295,7 @@ Team Slack Channel: #team-channel
 - Key business rules: [list critical rules here]
 ```
 
-### 2.3 Additional Context Files
+### 2.6 Additional Context Files
 
 Place these files at the root of your repository to give the agent richer context:
 
@@ -313,7 +308,7 @@ Place these files at the root of your repository to give the agent richer contex
 | `RUNBOOK.md` | Operational procedures for the agent to follow |
 | `GLOSSARY.md` | Business and domain terminology definitions |
 
-### 2.4 Initializing the Agent in a Session
+### 2.7 Initializing the Agent in a Session
 
 Always start a Claude Code session by grounding the agent:
 
@@ -339,7 +334,7 @@ Before writing a single line of code, teams define what success looks like. This
 
 ### 3.1 Defining Objectives
 
-Each initiative must have clearly defined objectives using the OKR format:
+Each initiative must have clearly defined objectives using the **OKR format**:
 
 - **Objective:** Qualitative, inspiring goal
 - **Key Results:** 2–4 measurable outcomes with a target number
@@ -390,6 +385,62 @@ Score = (Reach × Impact × Confidence) / Effort
 ### 4.3 Roadmap → Jira Epics
 
 Every roadmap item in H1 must be converted to a Jira Epic before the sprint starts. The agent can assist with this conversion when provided a roadmap document.
+
+### 4.4 Tools for Roadmap Creation & Prioritization
+
+Instead of manually managing roadmaps, teams should use tools that integrate with AI and downstream systems (Jira, docs, analytics).
+
+#### 🧭 Recommended Tools
+
+. **Productboard**
+Best for: Customer-driven roadmaps
+
+Key Features:
+- Collect feedback → auto-cluster themes (AI)
+- Prioritize features using impact scoring
+- Export directly to Jira epics
+🔗 https://www.productboard.com/
+
+. **Aha!**
+Best for: Structured product organizations
+
+Key Features:
+- Strategy → Initiatives → Epics → Features hierarchy
+- Built-in RICE & scoring models
+- Strong reporting for leadership
+🔗 https://www.aha.io/
+
+. **Notion**
+Best for: Lightweight + AI-assisted teams
+
+Key Features:
+- AI-generated roadmaps from ideas
+- Flexible databases (H1/H2/H3 views)
+- Easy collaboration across teams
+🔗 https://www.notion.so/
+
+. **Jira Product Discovery**
+Best for: Teams already using Jira
+
+Key Features:
+- Idea management → prioritization → delivery
+- Native sync with Jira Software
+- Built-in scoring + insights
+🔗 https://www.atlassian.com/software/jira/product-discovery
+
+### AI-Assisted Roadmap Creation
+
+**💡 Workflow**
+Instead of writing roadmaps manually:
+```bash
+claude
+> Here are raw ideas, customer feedback, and KPIs.
+> Please:
+> 1. Cluster them into themes
+> 2. Generate roadmap items (H1, H2, H3)
+> 3. Apply RICE scoring
+> 4. Output in a format ready for [Tool: Notion/Productboard/Jira]
+```
 
 ---
 
@@ -953,5 +1004,4 @@ A story is only ready for the agent to implement when **all** of the following a
 
 ---
 
-*AI-Powered Product Engineering Process Framework — Version 1.0 · 2025*
-*Confidential — Internal Use Only*
+*AI-Powered Product Engineering Process Framework — Version 1.0 · 2026*
