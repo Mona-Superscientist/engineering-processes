@@ -1153,5 +1153,4 @@ Estimated AI agent cost for this feature end-to-end (rough order of magnitude):
 
 ---
 
-*Example Playbook — AI Agent Zero to Production · v1.0 · 2025*
-*Stack: Flutter · Node.js/TS · React/TS · Notion · Figma · Jira*
+*Example Playbook — AI Agent Zero to Production · v1.0 · 2026*
